@@ -21,8 +21,13 @@ export function getCurrentMonthTransactions(transactions) {
 export function getTotals(transactions) {
   return transactions.reduce(
     (acc, t) => {
-      if (t.type === 'income') acc.income += Number(t.amount)
-      else acc.expense += Number(t.amount)
+      const amount = Number(t.amount) || 0
+      if (amount < 0) return acc // Skip invalid amounts
+      
+      if (t.type === 'income') acc.income += amount
+      else if (t.type === 'expense') acc.expense += amount
+      // Invalid types are ignored, not counted as expense
+      
       return acc
     },
     { income: 0, expense: 0 },

@@ -27,7 +27,15 @@ export default function DashboardPage() {
   const upiExpense = upiMonthly
     .filter((t) => t.type === 'expense')
     .reduce((sum, t) => sum + Number(t.amount), 0)
-  const trend = monthlyTrend(transactions)
+  const cashMonthly = monthlyTransactions.filter((t) => t.paymentMethod === 'Cash')
+  const cashIncome = cashMonthly
+    .filter((t) => t.type === 'income')
+    .reduce((sum, t) => sum + Number(t.amount), 0)
+  const cashExpense = cashMonthly
+    .filter((t) => t.type === 'expense')
+    .reduce((sum, t) => sum + Number(t.amount), 0)
+  // Use monthlyTransactions for consistency with displayed stats (current month only)
+  const trend = monthlyTrend(monthlyTransactions)
   const savingsTrend = trend.map((item) => ({ month: item.month, savings: item.income - item.expense }))
   const expenseByCategory = Object.fromEntries(
     CATEGORIES.map((category) => [
@@ -76,6 +84,25 @@ export default function DashboardPage() {
             <p className="text-xs uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400">UPI Net</p>
             <p className={`text-xl font-bold ${upiIncome - upiExpense >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
               {inr(upiIncome - upiExpense)}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-colors duration-300 dark:border-[#1F2A40] dark:bg-[#121A2B]">
+        <p className="mb-3 font-semibold">Cash Income & Expense (This Month)</p>
+        <div className="grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl bg-gray-100 p-3 dark:bg-[#0B1220]">
+            <p className="text-xs uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400">Cash Income</p>
+            <p className="text-xl font-bold text-emerald-400">{inr(cashIncome)}</p>
+          </div>
+          <div className="rounded-xl bg-gray-100 p-3 dark:bg-[#0B1220]">
+            <p className="text-xs uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400">Cash Expense</p>
+            <p className="text-xl font-bold text-rose-400">{inr(cashExpense)}</p>
+          </div>
+          <div className="rounded-xl bg-gray-100 p-3 dark:bg-[#0B1220]">
+            <p className="text-xs uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400">Cash Net</p>
+            <p className={`text-xl font-bold ${cashIncome - cashExpense >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+              {inr(cashIncome - cashExpense)}
             </p>
           </div>
         </div>

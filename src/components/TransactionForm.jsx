@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CATEGORIES, PAYMENT_METHODS } from '../data/constants.js'
 
 const base = {
@@ -13,6 +13,10 @@ const base = {
 
 export default function TransactionForm({ onSubmit, initial, onCancel }) {
   const [form, setForm] = useState(initial || base)
+
+  useEffect(() => {
+    setForm(initial || base)
+  }, [initial])
 
   const handleSubmit = (e) => {
     e.preventDefault()

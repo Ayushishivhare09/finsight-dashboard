@@ -12,6 +12,7 @@ export default function AnalyticsPage() {
       <Navbar title="Analytics" />
       <div className="grid gap-4 xl:grid-cols-2">
         <MonthlyTrendChart data={monthlyTrend(transactions)} />
+        {/* Use monthlyTransactions for current month category breakdown */}
         <CategoryPieChart data={categoryExpenses(monthlyTransactions)} />
       </div>
       <IncomeExpenseBarChart data={monthlyTrend(transactions)} />

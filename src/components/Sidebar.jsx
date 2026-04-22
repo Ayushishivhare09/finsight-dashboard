@@ -2,7 +2,7 @@ import { BarChart3, Building2, FileText, Goal, LayoutDashboard, PiggyBank, Setti
 import { NavLink } from 'react-router-dom'
 
 const links = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/transactions', label: 'Transactions', icon: Wallet },
   { to: '/analytics', label: 'Analytics', icon: BarChart3 },
   { to: '/budgets', label: 'Budgets', icon: PiggyBank },

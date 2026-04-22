@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
+import LandingPage from './pages/LandingPage.jsx'
 
 const AuthPage = lazy(() => import('./pages/AuthPage.jsx'))
 const DashboardPage = lazy(() => import('./pages/DashboardPage.jsx'))
@@ -17,6 +18,7 @@ function App() {
   return (
     <Suspense fallback={<div className="p-6 text-sm text-slate-400">Loading page...</div>}>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/auth" element={<AuthPage />} />
         <Route
           element={
@@ -25,7 +27,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/transactions" element={<TransactionsPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
           <Route path="/budgets" element={<BudgetsPage />} />

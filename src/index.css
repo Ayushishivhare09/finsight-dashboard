@@ -12,6 +12,10 @@ body {
   @apply bg-gray-50 text-gray-900 transition-colors duration-300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html.dark body {
   @apply bg-[#0B1220] text-white;
 }

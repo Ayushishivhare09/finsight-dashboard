@@ -1,16 +1,68 @@
-# React + Vite
+# 📊 Finsight Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+👉 **Live Demo:** (add your link)
 
-Currently, two official plugins are available:
+A modern finance dashboard that helps users **track, analyze, and understand their financial data with clarity and speed.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔥 Key Features
 
-## React Compiler
+### 📊 Financial Insights
+- 📈 Interactive charts for income & expenses  
+- 💰 Track spending patterns over time  
+- 📉 Visual breakdown of categories  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧾 Expense Management
+- ➕ Add & manage transactions  
+- 🗂️ Categorize expenses  
+- 🔍 Filter and search records easily  
 
-## Expanding the ESLint configuration
+### 📌 Dashboard Experience
+- 📊 Clean and intuitive UI  
+- ⚡ Real-time updates  
+- 📱 Fully responsive design  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💭 Problem It Solves
+
+Managing finances is often:
+- Scattered across apps or spreadsheets  
+- Hard to visualize  
+- Difficult to track consistently  
+
+---
+
+## 💡 Solution
+
+Finsight provides a **centralized, visual dashboard** to:
+- Track income and expenses  
+- Understand spending habits  
+- Make better financial decisions  
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend:** React, Vite, Tailwind CSS  
+- **State Management:** (add if used, e.g., React Query / Context API)  
+- **Charts:** (e.g., Recharts / Chart.js)  
+- **Backend:** (if any)  
+- **Deployment:** Vercel  
+
+---
+
+## 🚀 Performance
+
+- ⚡ Fast load times with Vite  
+- 📱 Fully responsive across devices  
+- 🎯 Optimized rendering for smooth UI  
+
+---
+
+## 🛠️ Installation & Setup
+
+```bash
+git clone https://github.com/your-username/finsight-dashboard.git
+cd finsight-dashboard
+npm install
+npm run dev

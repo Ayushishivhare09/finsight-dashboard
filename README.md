@@ -1,6 +1,6 @@
 # 📊 Finsight Dashboard
 
-👉 **Live Demo:** (add your link)
+👉 **Live Demo: https://finsight-dashboard-pi.vercel.app/** 
 
 A modern finance dashboard that helps users **track, analyze, and understand their financial data with clarity and speed.**
 

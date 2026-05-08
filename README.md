@@ -66,3 +66,17 @@ git clone https://github.com/your-username/finsight-dashboard.git
 cd finsight-dashboard
 npm install
 npm run dev
+```
+
+---
+
+## 📂 Folder Structure
+
+``` id="folder-structure-template"
+src/
+ ├── components/
+ ├── pages/
+ ├── hooks/
+ ├── services/
+ ├── utils/
+```

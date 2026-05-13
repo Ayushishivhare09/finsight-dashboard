@@ -7,6 +7,7 @@ A modern finance dashboard that helps users **track, analyze, and understand the
 ## 📸 Preview
 <img width="1903" height="1023" alt="Screenshot 2026-05-11 235721" src="https://github.com/user-attachments/assets/4c7b6915-da10-4872-ac56-ab40abbcf1d3" />
 <img width="1904" height="1019" alt="Screenshot 2026-05-11 235759" src="https://github.com/user-attachments/assets/3d827696-12e2-4ddc-83c3-55c9c0177820" />
+<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/9fbf9bd8-fbe8-4cd9-800a-372fe21c6a4e" />
 
 
 ## 🔥 Key Features
